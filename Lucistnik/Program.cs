@@ -53,10 +53,13 @@
         else
         {
             Console.WriteLine("Zadejte platné číslo.");
-            return NactiCeleCisloZKonzole(vyzva); 
+            return NactiCeleCisloZKonzole(vyzva); // Pekne pouziti rekurze 👏
+        }
     }
-}
-public class Lucistnik
+
+/// Osvedcena praxe je vytvaret novy soubor pro kazdou tridu, at se nam nepletou dohromady.
+/// V nasem pripade to moc nevadi jelikoz nemame moc kodu, ale je fajn si to procvicit :)
+public class Lucistnik 
 {
     string jmeno;
     int pocetSipu;
@@ -80,7 +83,7 @@ public class Lucistnik
         }
     }
 
-    public void PridejSipy(int pocet)
+    public void PridejSipy(int pocet) // Co se stane, pokud uzivatel zada zaporne cislo?
     {
         pocetSipu += pocet;
         Console.WriteLine($"{jmeno} přidal {pocet} šípů.");
